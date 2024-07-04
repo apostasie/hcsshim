@@ -5,11 +5,11 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/containerd/containerd/containers"
-	"github.com/containerd/containerd/namespaces"
-	ctrdoci "github.com/containerd/containerd/oci"
-	criconstants "github.com/containerd/containerd/pkg/cri/constants"
-	criopts "github.com/containerd/containerd/pkg/cri/opts"
+	"github.com/containerd/containerd/v2/core/containers"
+	criconstants "github.com/containerd/containerd/v2/pkg/cri/constants"
+	criopts "github.com/containerd/containerd/v2/pkg/cri/opts"
+	"github.com/containerd/containerd/v2/pkg/namespaces"
+	ctrdoci "github.com/containerd/containerd/v2/pkg/oci"
 	"github.com/opencontainers/runtime-spec/specs-go"
 
 	"github.com/Microsoft/hcsshim/pkg/annotations"
@@ -87,7 +87,7 @@ func CreateWindowsSpec(ctx context.Context, tb testing.TB, id string, opts ...ct
 
 // CreateSpecWithPlatform returns the OCI spec for the specified platform.
 // The context must contain a containerd namespace added by
-// [github.com/containerd/containerd/namespaces.WithNamespace].
+// [github.com/containerd/containerd/v2/pkg/namespaces.WithNamespace].
 func CreateSpecWithPlatform(ctx context.Context, tb testing.TB, plat, id string, opts ...ctrdoci.SpecOpts) *specs.Spec {
 	tb.Helper()
 	container := &containers.Container{ID: id}

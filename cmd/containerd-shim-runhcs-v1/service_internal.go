@@ -11,7 +11,7 @@ import (
 
 	task "github.com/containerd/containerd/api/runtime/task/v2"
 	containerd_v1_types "github.com/containerd/containerd/api/types/task"
-	"github.com/containerd/containerd/protobuf"
+	"github.com/containerd/containerd/v2/pkg/protobuf"
 	"github.com/containerd/errdefs"
 	typeurl "github.com/containerd/typeurl/v2"
 	"github.com/opencontainers/runtime-spec/specs-go"

@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	ctrdoci "github.com/containerd/containerd/oci"
-	criutil "github.com/containerd/containerd/pkg/cri/util"
+	criutil "github.com/containerd/containerd/v2/pkg/cri/util"
+	ctrdoci "github.com/containerd/containerd/v2/pkg/oci"
 	"golang.org/x/sys/windows"
 
 	"github.com/Microsoft/hcsshim/internal/cmd"

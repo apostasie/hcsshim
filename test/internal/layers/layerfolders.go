@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/containerd/containerd"
-	"github.com/containerd/containerd/mount"
+	containerd "github.com/containerd/containerd/v2/client"
+	"github.com/containerd/containerd/v2/core/mount"
 
 	testctrd "github.com/Microsoft/hcsshim/test/internal/containerd"
 )

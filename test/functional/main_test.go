@@ -21,7 +21,7 @@ import (
 
 	"github.com/Microsoft/go-winio/pkg/etw"
 	"github.com/Microsoft/go-winio/pkg/etwlogrus"
-	"github.com/containerd/containerd/namespaces"
+	"github.com/containerd/containerd/v2/pkg/namespaces"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v2"
 	"go.opencensus.io/trace"
@@ -343,7 +343,7 @@ func windowsServercoreImageLayers(ctx context.Context, tb testing.TB) []string {
 }
 
 // namespacedContext returns a [context.Context] with the provided namespace added via
-// [github.com/containerd/containerd/namespaces.WithNamespace].
+// [github.com/containerd/containerd/v2/pkg/namespaces.WithNamespace].
 func namespacedContext(ctx context.Context) context.Context {
 	// since this (usually) called at the start of a test, add the testing timeout to it
 	// for the entire test run
